@@ -1,0 +1,15 @@
+# Turn on validation, so we can use import:
+version: ~> 1.0
+
+services:
+- redis
+- postgresql
+- libidn
+- yarn
+
+script:
+- export RAILS_ENV=test
+- bundle install
+- rails db:setup
+- ./bin/rails assets:precompile
+- bundle exec rspec
