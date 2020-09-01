@@ -4,10 +4,10 @@ version: ~> 1.0
 services:
 - redis
 - postgresql
-- libidn
 - yarn
 
 script:
+- brew install libidn
 - export RAILS_ENV=test
 - bundle install
 - rails db:setup
