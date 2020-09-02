@@ -4,7 +4,6 @@ version: ~> 1.0
 services:
 - redis
 - postgresql
-- yarn
 
 install:
 - sudo apt-get install libldap2-dev
