@@ -4,8 +4,8 @@ version: ~> 1.0
 services:
 - redis
 - postgresql
-- node.js
 - yarn
+- node.js
 
 install:
 - sudo apt-get install libldap2-dev
