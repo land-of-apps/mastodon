@@ -9,9 +9,7 @@ services:
 install:
 - sudo apt-get install libldap2-dev
 - sudo apt-get install libidn11-dev
-- wget https://protobuf.googlecode.com/files/protobuf-2.4.1.tar.gz
-- tar -xzvf protobuf-2.4.1.tar.gz
-- pushd protobuf-2.4.1 && ./configure --prefix=/usr && make && sudo make install && popd
+- gem install google-protobuf -v 3.0.0.alpha.2.0 --pre
 
 script:
 - export RAILS_ENV=test
