@@ -6,8 +6,9 @@ services:
 - postgresql
 - yarn
 
-before_script:
-- brew install libidn
+before_install:
+- sudo apt-get install libldap2-dev
+- sudo apt-get install libidn11-dev
 
 script:
 - export RAILS_ENV=test
