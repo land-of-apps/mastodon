@@ -11,7 +11,8 @@ install:
 - sudo apt-get install libidn11-dev
 - sudo apt-get install -y libicu-dev libidn11-dev libprotobuf-dev protobuf-compiler
 - gem install cld3
-- yarn
+- yarn install
+- yarn update
 
 script:
 - export RAILS_ENV=test
