@@ -9,7 +9,8 @@ services:
 install:
 - sudo apt-get install libldap2-dev
 - sudo apt-get install libidn11-dev
-- gem install google-protobuf -v 3.0.0.alpha.2.0 --pre
+- sudo apt-get install -y libicu-dev libidn11-dev libprotobuf-dev protobuf-compiler
+- gem install cld3
 
 script:
 - export RAILS_ENV=test
