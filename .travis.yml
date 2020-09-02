@@ -6,8 +6,10 @@ services:
 - postgresql
 - yarn
 
-script:
+before_script:
 - brew install libidn
+
+script:
 - export RAILS_ENV=test
 - bundle install
 - rails db:setup
