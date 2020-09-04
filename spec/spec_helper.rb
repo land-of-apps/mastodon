@@ -1,5 +1,7 @@
 GC.disable
 
+require 'appmap/rspec'
+
 if ENV['DISABLE_SIMPLECOV'] != 'true'
   require 'simplecov'
   SimpleCov.start 'rails' do

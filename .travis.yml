@@ -1,0 +1,24 @@
+# Turn on validation, so we can use import:
+version: ~> 1.0
+
+services:
+- redis
+- postgresql
+- node.js
+- yarn
+
+install:
+- sudo apt-get install libldap2-dev
+- sudo apt-get install libidn11-dev
+- sudo apt-get install -y libicu-dev libidn11-dev libprotobuf-dev protobuf-compiler
+- nvm install 12.18.3
+
+script:
+- export RAILS_ENV=test
+- bundle install
+- rails db:setup
+- ./bin/rails assets:precompile
+- APPMAP=true bundle exec rspec
+
+after_script:
+- env DEBUG=true ruby ./upload-appmaps tmp/appmap/rspec
