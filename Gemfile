@@ -118,6 +118,9 @@ group :production, :test do
 end
 
 group :test do
+
+  gem 'appmap'
+
   gem 'capybara', '~> 3.32'
   gem 'climate_control', '~> 0.2'
   gem 'faker', '~> 2.11'
