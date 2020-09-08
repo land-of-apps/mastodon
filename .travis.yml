@@ -10,7 +10,7 @@ services:
 import:
 - land-of-apps/land-of-apps:travis/ruby-imports.yml
 
-before_script:
+install:
 - sudo apt-get install libldap2-dev
 - sudo apt-get install libidn11-dev
 - sudo apt-get install -y libicu-dev libidn11-dev libprotobuf-dev protobuf-compiler
