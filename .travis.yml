@@ -7,6 +7,9 @@ services:
 - node.js
 - yarn
 
+import:
+- land-of-apps/land-of-apps:travis/ruby-imports.yml
+
 install:
 - sudo apt-get install libldap2-dev
 - sudo apt-get install libidn11-dev
