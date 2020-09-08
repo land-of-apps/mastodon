@@ -1,4 +1,16 @@
 name: mastodon
 
 packages:
+- path: app/chewy
+- path: app/controllers
+- path: app/helpers
+- path: app/lib
+- path: app/mailers
+- path: app/models
+- path: app/policies
+- path: app/presenters
+- path: app/serializers
+- path: app/services
+- path: app/validators
+- path: app/workers
 - path: lib
