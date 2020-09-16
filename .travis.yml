@@ -11,7 +11,6 @@ services:
 - yarn
 
 before_install:
-- sudo apt-get install tree
 - sudo apt-get install libldap2-dev
 - sudo apt-get install libidn11-dev
 - sudo apt-get install -y libicu-dev libidn11-dev libprotobuf-dev protobuf-compiler
@@ -24,4 +23,4 @@ script:
 - APPMAP=true bundle exec rspec || true
 
 after_script:
-- env DEBUG=true ruby ./upload-appmaps tmp/appmap/rspec
+- cd tmp/appmap/rspec; ls
