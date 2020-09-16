@@ -24,4 +24,4 @@ script:
 - APPMAP=true bundle exec rspec || true
 
 after_script:
--- env DEBUG=true ruby ./upload-appmaps tmp/appmap/rspec
+- env DEBUG=true ruby ./upload-appmaps tmp/appmap/rspec
