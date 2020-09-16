@@ -11,6 +11,7 @@ services:
 - yarn
 
 before_install:
+- sudo apt-get install tree
 - sudo apt-get install libldap2-dev
 - sudo apt-get install libidn11-dev
 - sudo apt-get install -y libicu-dev libidn11-dev libprotobuf-dev protobuf-compiler
@@ -21,3 +22,7 @@ script:
 - rails db:setup
 - ./bin/rails assets:precompile
 - APPMAP=true bundle exec rspec || true
+
+after_script:
+- echo "display directories >>"
+- tree -d
