@@ -24,5 +24,4 @@ script:
 - APPMAP=true bundle exec rspec || true
 
 after_script:
-- echo "display directories >>"
-- tree -d
+-- env DEBUG=true ruby ./upload-appmaps tmp/appmap/rspec
