@@ -1,14 +1,14 @@
 # Turn on validation, so we can use import:
 version: ~> 1.0
 
+import:
+- land-of-apps/land-of-apps:travis/ruby-imports.yml
+
 services:
 - redis
 - postgresql
 - node.js
 - yarn
-
-import:
-- land-of-apps/land-of-apps:travis/ruby-imports.yml
 
 before_script:
 - sudo apt-get install libldap2-dev
@@ -18,7 +18,6 @@ before_script:
 
 script:
 - export RAILS_ENV=test
-- bundle install
 - rails db:setup
 - ./bin/rails assets:precompile
 - APPMAP=true bundle exec rspec || true
