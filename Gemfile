@@ -3,6 +3,8 @@
 source 'https://rubygems.org'
 ruby '>= 2.5.0', '< 3.0.0'
 
+gem 'appmap', github: 'applandinc/appmap-ruby', branch: 'master'
+
 gem 'pkg-config', '~> 1.4'
 
 gem 'puma', '~> 4.3'
