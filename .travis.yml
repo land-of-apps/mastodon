@@ -18,6 +18,7 @@ addons:
       - protobuf-compiler
 
 script:
+  - gem install rails
   - sudo apt-get install ffmpeg
   - nvm install 12.18.3
   - rails db:setup
