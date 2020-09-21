@@ -1,9 +1,6 @@
 # Turn on validation, so we can use import:
 version: ~> 1.0
 
-import:
-  - land-of-apps/land-of-apps:travis/ruby-imports.yml
-
 services:
   - redis
   - postgresql
@@ -25,4 +22,4 @@ script:
   - nvm install 12.18.3
   - rails db:setup
   - ./bin/rails assets:precompile
-  - APPMAP=true bundle exec rspec -f doc || true
+  - bundle exec rspec -f doc || true
