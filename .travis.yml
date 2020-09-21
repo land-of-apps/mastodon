@@ -19,9 +19,9 @@ addons:
       - libidn11-dev
       - libprotobuf-dev
       - protobuf-compiler
-      - ffmpeg 
 
 script:
+  - sudo apt-get ffmpeg
   - nvm install 12.18.3
   - rails db:setup
   - ./bin/rails assets:precompile
