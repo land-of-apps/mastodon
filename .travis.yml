@@ -19,6 +19,7 @@ addons:
       - libidn11-dev
       - libprotobuf-dev
       - protobuf-compiler
+      - ffmpeg 
 
 script:
   - nvm install 12.18.3
