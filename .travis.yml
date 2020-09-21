@@ -2,20 +2,24 @@
 version: ~> 1.0
 
 services:
-- redis
-- postgresql
-- node.js
-- yarn
+  - redis
+  - postgresql
+  - node.js
+  - yarn
 
-install:
-- sudo apt-get install libldap2-dev
-- sudo apt-get install libidn11-dev
-- sudo apt-get install -y libicu-dev libidn11-dev libprotobuf-dev protobuf-compiler
-- nvm install 12.18.3
+addons:
+  apt:
+    packages:
+      - libldap2-dev
+      - libidn11-dev
+      - libicu-dev
+      - libidn11-dev
+      - libprotobuf-dev
+      - protobuf-compiler
 
 script:
-- export RAILS_ENV=test
-- bundle install
-- rails db:setup
-- ./bin/rails assets:precompile
-- bundle exec rspec || true
+  - sudo apt-get install ffmpeg
+  - nvm install 12.18.3
+  - rails db:setup
+  - ./bin/rails assets:precompile
+  - bundle exec rspec -f doc || true
