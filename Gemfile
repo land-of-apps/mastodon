@@ -119,6 +119,9 @@ group :production, :test do
 end
 
 group :test do
+
+  gem 'appmap', github: 'applandinc/appmap-ruby', branch: 'master'
+
   gem 'capybara', '~> 3.33'
   gem 'climate_control', '~> 0.2'
   gem 'faker', '~> 2.13'

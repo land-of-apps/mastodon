@@ -1,3 +1,5 @@
+require 'appmap/rspec'
+
 GC.disable
 
 if ENV['DISABLE_SIMPLECOV'] != 'true'
